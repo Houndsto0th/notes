@@ -1,0 +1,39 @@
+<link href='//fonts.googleapis.com/css?family=Roboto:400,300,500,900' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="app/styles/app.css">
+<script src="javascript/app.js" type="text/javascript" charset="utf-8"></script>
+
+<h1>{{message-queue}}</h1>
+
+<div class="newNote">
+  {{textarea placeholder="Add a note!" value=noteCopy}}
+<div class="buttonContain">
+  <a href="#" {{bind-attr class= ":btn noteHasContent:plus:menu"}} {{action 'newNote'}}>
+    <span>
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+    </span>
+  </a>
+</div>
+</div>
+
+
+
+{{#each note in model}}
+  <div class="savedNote">
+      <p>
+      {{note.body}}
+      </p>
+    <div class="buttonDelete">
+    <a href="#" class= "delete btn x" {{action 'deleteNote' note.id}}>
+      <span>
+        <span class="s1"></span>
+        <span class="s2"></span>
+        <span class="s3"></span>
+      </span>
+    </a>
+    </div>
+  </div>
+{{/each}}
+
+{{outlet}}
