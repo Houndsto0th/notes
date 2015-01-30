@@ -1,0 +1,20 @@
+<div class="col-sm-3">
+  <div class="savedNote">
+      <h3>{{title}}</h3>
+      <p>
+      {{body}}
+      </p>
+  <section class="note-actions">
+    <a href="#" class= "delete btn x" {{action 'deleteNote' id}}>
+      <span>
+        <span class="s1"></span>
+        <span class="s2"></span>
+        <span class="s3"></span>
+      </span>
+    </a>
+  </section>
+    </div>
+  </div>
+</div>
+
+{{yield}}

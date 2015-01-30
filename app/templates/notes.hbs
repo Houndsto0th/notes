@@ -1,39 +1,32 @@
 <link href='//fonts.googleapis.com/css?family=Roboto:400,300,500,900' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="app/styles/app.css">
 <script src="javascript/app.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="app/styles/app.css">
 
-<h1>{{message-queue}}</h1>
-
-<div class="newNote">
-  {{textarea placeholder="Add a note!" value=noteCopy}}
-<div class="buttonContain">
-  <a href="#" {{bind-attr class= ":btn noteHasContent:plus:menu"}} {{action 'newNote'}}>
-    <span>
-      <span class="s1"></span>
-      <span class="s2"></span>
-      <span class="s3"></span>
-    </span>
-  </a>
-</div>
-</div>
-
-
-
-{{#each note in model}}
-  <div class="savedNote">
-      <p>
-      {{note.body}}
-      </p>
-    <div class="buttonDelete">
-    <a href="#" class= "delete btn x" {{action 'deleteNote' note.id}}>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+  <div class="newNote">
+    {{input type=text placeholder="Enter a Title" value=noteTitle}}
+    {{textarea placeholder="Add a note!" value=noteCopy}}
+  <div class="buttonContain">
+    <a href="#" {{bind-attr class= ":btn noteHasContent:plus:menu"}} {{action 'newNote'}}>
       <span>
         <span class="s1"></span>
         <span class="s2"></span>
         <span class="s3"></span>
       </span>
     </a>
-    </div>
   </div>
-{{/each}}
+  </div>
+  </div>
+</div>
+
+
+<div class="row">
+  {{#each note in model}}
+    {{local-note body=note.body title=note.title id=note.id deleteNote = "deleteNote"}}
+  {{/each}}
+</div>
 
 {{outlet}}
+</div>
