@@ -1,11 +1,11 @@
 <div class="col-sm-3">
   <div class="savedNote">
-      <h3>{{title}}</h3>
+      <h3>{{note.title}}</h3>
       <p>
-      {{body}}
+      {{note.body}}
       </p>
   <section class="note-actions">
-    <a href="#" class= "delete btn x" {{action 'deleteNote' id}}>
+    <a href="#" class= "delete btn x" {{action 'deleteNote' note}}>
       <span>
         <span class="s1"></span>
         <span class="s2"></span>

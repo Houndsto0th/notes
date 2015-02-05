@@ -1,6 +1,3 @@
-<link href='//fonts.googleapis.com/css?family=Roboto:400,300,500,900' rel='stylesheet' type='text/css'>
-<script src="javascript/app.js" type="text/javascript" charset="utf-8"></script>
-<link rel="stylesheet" href="app/styles/app.css">
 
 <div class="container">
   <div class="row">
@@ -24,7 +21,7 @@
 
 <div class="row">
   {{#each note in model}}
-    {{local-note body=note.body title=note.title id=note.id deleteNote = "deleteNote"}}
+    {{local-note note=note deleteNote = "deleteNote"}}
   {{/each}}
 </div>
 

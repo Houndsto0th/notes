@@ -22,7 +22,7 @@ module.exports = function(environment) {
       'style-src': "'self'",
       'media-src': "'self'"
     },
-
+~
 
     APP: {
       // Here you can pass flags/options to your application instance
