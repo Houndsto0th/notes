@@ -1,0 +1,1 @@
+/Users/Houndsto0th/workspace/notes/tmp/jshinter-tmp_dest_dir-GqzC2zmT.tmp/router.jshint.js

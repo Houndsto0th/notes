@@ -3,8 +3,8 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'notes',
-    environment: environment,
     adapterURL: process.env.ADAPTER_URL,
+    environment: environment,
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
