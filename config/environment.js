@@ -4,6 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'notes',
     environment: environment,
+    adapterURL: process.env.ADAPTER_URL,
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -15,11 +16,11 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self'",
-      'font-src': "'self'",
+      'script-src': "'self' https://cdn.mxpnl.com",
+      'font-src': "'self' http://fonts.gstatic.com",
       'connect-src': "'self' localhost:3000",
       'img-src': "'self'",
-      'style-src': "'self'",
+      'style-src': "'self' http://fonts.googleapis.com",
       'media-src': "'self'"
     },
 
