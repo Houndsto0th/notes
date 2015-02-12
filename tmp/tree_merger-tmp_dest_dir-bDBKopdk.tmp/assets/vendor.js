@@ -1,1 +1,0 @@
-/Users/Houndsto0th/workspace/notes/tmp/caching-writer-dest-dir_VPMIBZ.tmp/assets/vendor.js
