@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'notes',
     environment: environment,
-    adapterURL: process.env.ADAPTER_URL || 'http://localhost:3000',
+    adapterURL: process.env.ADAPTER_URL || 'https://notes-backend.herokuapp.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -18,7 +18,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self' https://cdn.mxpnl.com",
       'font-src': "'self' http://fonts.gstatic.com",
-      'connect-src': "'self' localhost:3000",
+      'connect-src': "'self' https://notes-backend.herokuapp.com/",
       'img-src': "'self'",
       'style-src': "'self' http://fonts.googleapis.com",
       'media-src': "'self'"
